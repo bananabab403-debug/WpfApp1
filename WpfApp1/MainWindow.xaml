@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl Margin="10">
+            <TabItem Header="Оценка">
+                <StackPanel Margin="10">
+                    <StackPanel Margin="15">
+                        <TextBlock Text="Введите баллы (0–100):" />
+                        <TextBox x:Name="txtScore" Width="200" Margin="0,5"/>
+                        <Button Content="Определить оценку" Width="200" Margin="0,5" Click="BtnScore_Click"/>
+                        <TextBlock x:Name="lblScoreResult" FontWeight="Bold" Margin="0,5"/>
+
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Время суток">
+                <StackPanel Margin="10">
+                    <StackPanel Margin="15">
+                        <TextBlock Text="сколько времени введи(0-23) и минут (0-59):"  />
+
+                        <TextBox x:Name="txtHours" Width="300" Margin="0,5" HorizontalAlignment="Left"/>
+                        <TextBox x:Name="txtMinutes" Width="300" Margin="0,5" HorizontalAlignment="Left"/>
+                        <Button Content="Определить время суток" Width="200" Margin="0,5"
+Click="BtnTimeOfDay_Click"/>
+                        <TextBlock x:Name="lblTimeResult" FontWeight="Bold" Margin="0,5"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="День недели">
+                <StackPanel Margin="10">
+                    <StackPanel Margin="15">
+                        <TextBlock Text="Введите день недели (1–7):" />
+                        <TextBox x:Name="txtDay" Width="200" Margin="0,5"/>
+                        <Button Content="Определить день недели" Width="200" Margin="0,5"
+Click="BtnDayOfWeek_Click"/>
+                        <TextBlock x:Name="lblDayResult" FontWeight="Bold" Margin="0,5"/>
+
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Треугольник">
+                <StackPanel Margin="10">
+                            <StackPanel Margin="15">
+            <TextBlock Text="введите стороны треугольника:"  />
+
+            <TextBox x:Name="txtA" Width="300" Margin="0,5" HorizontalAlignment="Left"/>
+            <TextBox x:Name="txtB" Width="300" Margin="0,5" HorizontalAlignment="Left"/>
+            <TextBox x:Name="txtC" Width="300" Margin="0,5" HorizontalAlignment="Left"/>
+            <Button Content="Определить время суток" Width="200" Margin="0,5"
+Click="BtnTriangle_Click"/>
+            <TextBlock x:Name="lblTriangleResult" FontWeight="Bold" Margin="0,5"/>
+        </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Window>
